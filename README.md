@@ -4,10 +4,10 @@
 
 📦 宝塔ThinkPhP6扩展包
 
-[![Latest Stable Version](https://poser.pugx.org/liguangchun/think-bt/v/stable)](https://packagist.org/packages/liguangchun/think-bt) 
-[![Latest Unstable Version](https://poser.pugx.org/liguangchun/think-bt/v/unstable)](https://packagist.org/packages/liguangchun/think-bt) 
-[![Total Downloads](https://poser.pugx.org/liguangchun/think-bt/downloads)](https://packagist.org/packages/liguangchun/think-bt) 
-[![License](https://poser.pugx.org/liguangchun/think-bt/license)](https://packagist.org/packages/liguangchun/think-bt)
+[![Latest Stable Version](https://poser.pugx.org/dtapp/think-bt/v/stable)](https://packagist.org/packages/dtapp/think-bt) 
+[![Latest Unstable Version](https://poser.pugx.org/dtapp/think-bt/v/unstable)](https://packagist.org/packages/dtapp/think-bt) 
+[![Total Downloads](https://poser.pugx.org/dtapp/think-bt/downloads)](https://packagist.org/packages/dtapp/think-bt) 
+[![License](https://poser.pugx.org/dtapp/think-bt/license)](https://packagist.org/packages/dtapp/think-bt)
 
 ## 依赖环境
 
