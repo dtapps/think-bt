@@ -24,17 +24,17 @@ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ## 安装
 
 ```text
-composer require liguangchun/think-bt -vvv
+composer require dtapp/think-bt -vvv
 ```
 
 ## 更新
 
 ```text
-composer update liguangchun/think-bt -vvv
+composer update dtapp/think-bt -vvv
 ```
 
 ## 删除
 
 ```text
-composer remove liguangchun/think-bt -vvv
+composer remove dtapp/think-bt -vvv
 ```
