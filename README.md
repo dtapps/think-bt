@@ -15,15 +15,10 @@
 
 
 # 安装
-## 配置源库
+## 建议配置源库
 
 ```text
-"repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://mirrors.aliyun.com/composer/"
-        }
-    }
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 
 ## 安装
