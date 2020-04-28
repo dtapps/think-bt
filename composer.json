@@ -29,6 +29,13 @@
       "DtApp\\Think\\Bt\\": "src"
     }
   },
+  "extra": {
+    "think": {
+      "config": {
+        "dtapp": "src/config.php"
+      }
+    }
+  },
   "repositories": {
     "packagist": {
       "type": "composer",
