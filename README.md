@@ -4,10 +4,10 @@
 
 📦 宝塔ThinkPhP6扩展包
 
-[![Latest Stable Version](https://poser.pugx.org/liguangchun/bt/v/stable)](https://packagist.org/packages/liguangchun/bt) 
-[![Latest Unstable Version](https://poser.pugx.org/liguangchun/bt/v/unstable)](https://packagist.org/packages/liguangchun/bt) 
-[![Total Downloads](https://poser.pugx.org/liguangchun/bt/downloads)](https://packagist.org/packages/liguangchun/bt) 
-[![License](https://poser.pugx.org/liguangchun/bt/license)](https://packagist.org/packages/liguangchun/bt)
+[![Latest Stable Version](https://poser.pugx.org/liguangchun/think-bt/v/stable)](https://packagist.org/packages/liguangchun/think-bt) 
+[![Latest Unstable Version](https://poser.pugx.org/liguangchun/think-bt/v/unstable)](https://packagist.org/packages/liguangchun/think-bt) 
+[![Total Downloads](https://poser.pugx.org/liguangchun/think-bt/downloads)](https://packagist.org/packages/liguangchun/think-bt) 
+[![License](https://poser.pugx.org/liguangchun/think-bt/license)](https://packagist.org/packages/liguangchun/think-bt)
 
 ## 依赖环境
 
@@ -29,17 +29,17 @@
 ## 安装
 
 ```text
-composer require liguangchun/bt -vvv
+composer require liguangchun/think-bt -vvv
 ```
 
 ## 更新
 
 ```text
-composer update liguangchun/bt -vvv
+composer update liguangchun/think-bt -vvv
 ```
 
 ## 删除
 
 ```text
-composer remove liguangchun/bt -vvv
+composer remove liguangchun/think-bt -vvv
 ```
