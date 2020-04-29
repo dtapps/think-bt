@@ -21,7 +21,7 @@ use DtApp\Curl\CurlException;
 /**
  * 系统安全
  * Class firewall
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Firewall extends BaseBt
 {

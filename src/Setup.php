@@ -21,7 +21,7 @@ use DtApp\Curl\CurlException;
 /**
  * 设置
  * Class Setup
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Setup extends BaseBt
 {

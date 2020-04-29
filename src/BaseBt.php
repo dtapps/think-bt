@@ -20,8 +20,9 @@ use DtApp\Curl\BtCn;
 use DtApp\Curl\CurlException;
 
 /**
+ * 中间件
  * Class BaseBt
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class BaseBt
 {

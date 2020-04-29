@@ -21,7 +21,7 @@ use DtApp\Curl\CurlException;
 /**
  * 计划任务
  * Class CronTab
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class CronTab extends BaseBt
 {

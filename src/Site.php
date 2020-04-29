@@ -21,7 +21,7 @@ use DtApp\Curl\CurlException;
 /**
  * 网站管理
  * Class Site
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Site extends BaseBt
 {
