@@ -44,3 +44,31 @@ composer update dtapp/think-bt -vvv
 ```text
 composer remove dtapp/think-bt -vvv
 ```
+
+## 使用
+#### 支持动态和静动配置
+#### 动态配置：每次调用的时候传入配置参数，参数请参考下面示例方法
+#### 静动配置：在根目录下的config文件夹里有个dtapp.php文件，配置如下方所示
+```text
+// 宝塔配置
+    'bt' => [
+        // 接口网址带端口
+        'path' => '',
+        // 密钥
+        'key' => ''
+    ]
+```
+#### 获取面板操作日志 示例代码
+```text
+use DtApp\Think\Bt\Api;
+
+ $config = [
+     'key' => $this->bt_app_data['key'],
+     'panel' => $BT_PANEL,
+ ];
+
+$page = 1;
+$limit = 10;
+$site = new Api($config);
+$data = $site->getLog($page, $limit);
+```
