@@ -27,11 +27,11 @@ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 composer require dtapp/think-bt ^6.0.x-dev -vvv
 ``````
    
-   ## 安装稳定版
+## 安装稳定版
    
-   ```text
-   composer require dtapp/think-bt ^6.0.* -vvv
-   ```
+```text
+composer require dtapp/think-bt ^6.0.* -vvv
+```
 
 ## 更新
 
