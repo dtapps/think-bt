@@ -44,9 +44,10 @@ class BaseBt
      */
     public function __construct(array $options)
     {
-        if (empty($options['key'])) throw new BtException('请检查配置 接口密钥：[key]，示例：x0m1NM1yumUVTyzLrpoJ4tgbVAZFzWVj');
-        if (empty($options['panel'])) throw new BtException('请检查配置 面板地址：[panel]，示例：http://127.0.0.1:8888');
-        $this->config = new DataArray($options);
+        if (empty($options['key'])) if (empty(config('dtapp.bt.key'))) throw new BtException('请检查配置 接口密钥：[key]，示例：x0m1NM1yumUVTyzLrpoJ4tgbVAZFzWVj');
+        if (empty($options['panel'])) if (empty(config('dtapp.bt.panel'))) throw new BtException('请检查配置 面板地址：[panel]，示例：http://127.0.0.1:8888');
+        if (!empty($options['panel']) && !empty($options['key'])) $this->config = new DataArray($options);
+        if (!empty(config('dtapp.bt.panel')) && !empty(config('dtapp.bt.panel'))) $this->config = new DataArray(config('dtapp.bt'));
     }
 
     /**
