@@ -14,14 +14,12 @@
 // | Packagist 地址 ：https://packagist.org/packages/liguangchun/think-bt
 // +----------------------------------------------------------------------
 
-namespace DtApp\Think\Bt;
-
-/**
- * 文件管理
- * Class Files
- * @package DtApp\Bt
- */
-class Files extends BaseBt
-{
-
-}
+return [
+    // 宝塔配置
+    'bt' => [
+        // 默认路径
+        'path'=>'',
+        // 默认密钥
+        'key'
+    ]
+];
