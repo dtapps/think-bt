@@ -29,7 +29,7 @@ class BaseBt
     /**
      * 定义当前版本
      */
-    const VERSION = '1.0.1';
+    const VERSION = '6.0.1';
 
     /**
      * 配置
@@ -42,7 +42,7 @@ class BaseBt
      * @param array $options
      * @throws BtException
      */
-    public function __construct(array $options)
+    public function __construct(array $options = [])
     {
         if (empty($options['key'])) if (empty(config('dtapp.bt.key'))) throw new BtException('请检查配置 接口密钥：[key]，示例：x0m1NM1yumUVTyzLrpoJ4tgbVAZFzWVj');
         if (empty($options['panel'])) if (empty(config('dtapp.bt.panel'))) throw new BtException('请检查配置 面板地址：[panel]，示例：http://127.0.0.1:8888');
