@@ -21,7 +21,7 @@ use DtApp\Curl\CurlException;
 /**
  * 数据库管理
  * Class Database
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Database extends BaseBt
 {

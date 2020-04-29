@@ -21,7 +21,7 @@ use Exception;
 /**
  * 错误处理
  * Class BtException
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class BtException extends Exception
 {

@@ -19,7 +19,7 @@ namespace DtApp\Think\Bt;
 /**
  * FTP管理
  * Class Ftp
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Ftp extends BaseBt
 {

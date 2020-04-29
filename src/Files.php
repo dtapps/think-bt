@@ -19,7 +19,7 @@ namespace DtApp\Think\Bt;
 /**
  * 文件管理
  * Class Files
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
 class Files extends BaseBt
 {

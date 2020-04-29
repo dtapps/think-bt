@@ -16,11 +16,13 @@
 
 namespace DtApp\Think\Bt;
 
+use ArrayAccess;
+
 /**
  * Class DataArray
- * @package DtApp\Bt
+ * @package DtApp\Think\Bt
  */
-class DataArray implements \ArrayAccess
+class DataArray implements ArrayAccess
 {
     /**
      * 当前配置值
