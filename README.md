@@ -63,12 +63,14 @@ composer remove dtapp/think-bt -vvv
 use DtApp\Think\Bt\Api;
 
  $config = [
-     'key' => $this->bt_app_data['key'],
+     'key' => $BT_KEY,
      'panel' => $BT_PANEL,
  ];
 
-$page = 1;
-$limit = 10;
-$site = new Api($config);
-$data = $site->getLog($page, $limit);
+$api = new Api($config);
+try {
+    var_dump($api->getLogs()->page(1)->limit(10)->order('id desc')->toArray());
+} catch (CurlException $e) {
+    var_dump($e->getMessage());
+}
 ```
