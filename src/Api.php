@@ -25,13 +25,13 @@ use DtApp\Curl\CurlException;
  */
 class Api extends BaseBt
 {
-    private $contents;
-    private $backtrack;
+    private $url = '';
     private $page = 1;
     private $limit = 15;
     private $order = 'id desc';
-    private $url = '';
     private $where = [];
+    private $contents;
+    private $backtrack;
 
     /**
      * 获取监控信息
@@ -54,7 +54,7 @@ class Api extends BaseBt
      */
     public function getSites()
     {
-        $this->url = '/crontab?action=GetDataList';
+        $this->url = $this->mimes('GetDataList');
         $this->where['type'] = 'sites';
         return $this;
     }
@@ -65,7 +65,7 @@ class Api extends BaseBt
      */
     public function getDatabases()
     {
-        $this->url = '/data?action=getData';
+        $this->url = $this->mimes('getData');
         $this->where['tojs'] = 'database.get_list';
         $this->where['table'] = 'databases';
         $this->where['limit'] = $this->limit;
@@ -80,7 +80,7 @@ class Api extends BaseBt
      */
     public function getFirewalls()
     {
-        $this->url = '/data?action=getData';
+        $this->url = $this->mimes('getData');
         $this->where['tojs'] = 'firewall.get_list';
         $this->where['table'] = 'firewall';
         $this->where['limit'] = $this->limit;
@@ -95,7 +95,7 @@ class Api extends BaseBt
      */
     public function getLogs()
     {
-        $this->url = '/data?action=getData';
+        $this->url = $this->mimes('getData');
         $this->where['tojs'] = 'firewall.get_log_list';
         $this->where['table'] = 'logs';
         $this->where['limit'] = $this->limit;
@@ -110,7 +110,7 @@ class Api extends BaseBt
      */
     public function getNews()
     {
-        $this->url = '/config?action=get_settings';
+        $this->url = $this->mimes('get_settings');
         return $this;
     }
 
@@ -120,7 +120,7 @@ class Api extends BaseBt
      */
     public function getCronTabs()
     {
-        $this->url = '/data?action=getData';
+        $this->url = $this->mimes('getData');
         $this->where['tojs'] = 'site.get_list';
         $this->where['table'] = 'sites';
         $this->where['limit'] = $this->limit;
@@ -135,7 +135,7 @@ class Api extends BaseBt
      */
     public function getTypes()
     {
-        $this->url = '/site?action=get_site_types';
+        $this->url = $this->mimes('get_site_types');
         return $this;
     }
 
@@ -145,7 +145,7 @@ class Api extends BaseBt
      */
     public function getSoFts()
     {
-        $this->url = '/plugin?action=get_soft_list';
+        $this->url = $this->mimes('get_soft_list');
         $this->where['p'] = $this->page;
         $this->where['tojs'] = 'soft.get_list';
         return $this;
@@ -157,7 +157,7 @@ class Api extends BaseBt
      */
     public function getDiskInfo()
     {
-        $this->url = '/system?action=GetDiskInfo';
+        $this->url = $this->mimes('GetDiskInfo');
         return $this;
     }
 
@@ -167,7 +167,7 @@ class Api extends BaseBt
      */
     public function getSystemTotal()
     {
-        $this->url = '/system?action=GetSystemTotal';
+        $this->url = $this->mimes('GetSystemTotal');
         return $this;
     }
 
@@ -177,7 +177,7 @@ class Api extends BaseBt
      */
     public function getUserInfo()
     {
-        $this->url = '/ssl?action=GetUserInfo';
+        $this->url = $this->mimes('GetUserInfo');
         return $this;
     }
 
@@ -187,7 +187,7 @@ class Api extends BaseBt
      */
     public function getNetWork()
     {
-        $this->url = '/system?action=GetNetWork';
+        $this->url = $this->mimes('GetNetWork');
         return $this;
     }
 
@@ -197,7 +197,7 @@ class Api extends BaseBt
      */
     public function getPlugin()
     {
-        $this->url = '/plugin?action=get_index_list';
+        $this->url = $this->mimes('get_index_list');
         return $this;
     }
 
@@ -207,7 +207,7 @@ class Api extends BaseBt
      */
     public function getSoft()
     {
-        $this->url = '/plugin?action=get_soft_list';
+        $this->url = $this->mimes('get_soft_list');
         return $this;
     }
 
@@ -217,7 +217,7 @@ class Api extends BaseBt
      */
     public function getUpdatePanel()
     {
-        $this->url = '/ajax?action=UpdatePanel';
+        $this->url = $this->mimes('UpdatePanel');
         return $this;
     }
 
@@ -329,5 +329,17 @@ class Api extends BaseBt
         if (empty($this->backtrack)) return [];
         if (is_array($this->backtrack)) return $this->backtrack;
         return json_decode($this->backtrack, true);
+    }
+
+    /**
+     * 获取文件的信息
+     * @param $name
+     * @return string
+     */
+    private function mimes($name): string
+    {
+        $mimes = include __DIR__ . '/bin/mimes.php';
+        if (isset($mimes[$name])) return '/' . $mimes[$name];
+        return '';
     }
 }
