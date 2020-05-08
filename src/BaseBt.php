@@ -16,8 +16,8 @@
 
 namespace DtApp\Think\Bt;
 
-use DtApp\Curl\BtCn;
-use DtApp\Curl\CurlException;
+use DtApp\ThinkLibrary\exception\CurlException;
+use DtApp\ThinkLibrary\service\curl\BtService;
 
 /**
  * 中间件
@@ -72,8 +72,13 @@ class BaseBt
             $fp = fopen($cookie_file, 'w+');
             fclose($fp);
         }
-        $BtCn = new BtCn($config);
-        return $BtCn->httpPost($url, $data, $cookie_file, 60, $is_json);
+        return BtService::instance()
+            ->panel($this->config->get('panel'))
+            ->key($this->config->get('key'))
+            ->url($url)
+            ->cookie($cookie_file)
+            ->data($data)
+            ->toArray($is_json);
     }
 
     /**

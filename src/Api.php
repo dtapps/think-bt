@@ -16,7 +16,7 @@
 
 namespace DtApp\Think\Bt;
 
-use DtApp\Curl\CurlException;
+use DtApp\ThinkLibrary\exception\CurlException;
 
 /**
  * 接口

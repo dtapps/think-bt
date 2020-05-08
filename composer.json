@@ -27,7 +27,6 @@
     "ext-json": "*",
     "ext-curl": "*",
     "topthink/framework": "^6.0.0",
-    "liguangchun/curl": "^1.0",
     "liguangchun/think-library": "6.x-dev"
   },
   "autoload": {
