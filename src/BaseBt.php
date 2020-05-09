@@ -17,7 +17,7 @@
 namespace DtApp\Think\Bt;
 
 use DtApp\ThinkLibrary\exception\CurlException;
-use DtApp\ThinkLibrary\service\curl\BtService;
+use DtApp\ThinkLibrary\service\Curl\BtService;
 
 /**
  * 中间件
